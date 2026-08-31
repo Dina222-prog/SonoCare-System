@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SonoCare - Patients</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            SonoCare
+        </div>
+
+        <div class="nav-links">
+            <a href="index.html">Dashboard</a>
+            <a href="patients.html">Patients</a>
+            <a href="appointments.html">Appointments</a>
+            <a href="reports.html">Reports</a>
+        </div>
+
+    </nav>
+
+    <header>
+        <h1>Patient Management</h1>
+        <p>Add and manage patient information.</p>
+    </header>
+
+    <main>
+
+        <div id="patientMessage" class="message-box"></div>
+
+        <section class="appointment-form">
+
+            <h2>Add New Patient</h2>
+
+            <form id="patientForm">
+
+                <input
+                    type="text"
+                    id="patientId"
+                    placeholder="Patient ID"
+                    required
+                >
+
+                <input
+                    type="text"
+                    id="patientName"
+                    placeholder="Full Name"
+                    required
+                >
+
+                <input
+                    type="number"
+                    id="patientAge"
+                    placeholder="Age"
+                    min="0"
+                    max="120"
+                    required
+                >
+
+                <select id="patientGender" required>
+                    <option value="">Select Gender</option>
+                    <option value="Female">Female</option>
+                    <option value="Male">Male</option>
+                </select>
+
+                <input
+                    type="tel"
+                    id="patientPhone"
+                    placeholder="Phone Number"
+                    required
+                >
+
+                <button type="submit" id="patientSubmitButton">
+                    Save Patient
+                </button>
+
+            </form>
+
+        </section>
+
+        <section class="appointments-list">
+
+            <h2>Patients</h2>
+
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    id="patientSearch"
+                    placeholder="Search by Patient Name or ID"
+                >
+
+            </div>
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Patient ID</th>
+                            <th>Name</th>
+                            <th>Age</th>
+                            <th>Gender</th>
+                            <th>Phone</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="patientsTableBody">
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <div class="logout-container">
+        <button id="logoutBtn" class="logout-btn">
+            Logout
+        </button>
+    </div>
+
+    <footer>
+        <p>© 2026 SonoCare - Ultrasound Information Management System</p>
+    </footer>
+
+    <script src="auth.js"></script>
+    <script src="patients.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,597 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* Body */
+
+body {
+    background: #f4f7fb;
+    color: #333;
+}
+
+
+/* Navbar */
+
+.navbar {
+    background: white;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 15px 5%;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+
+.logo {
+    background: #0d6efd;
+
+    color: white;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    padding: 10px 15px;
+
+    border-radius: 8px;
+}
+
+
+.nav-links {
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+
+.nav-links a {
+    text-decoration: none;
+
+    color: #333;
+
+    font-weight: 600;
+
+    padding: 8px 10px;
+
+    border-radius: 6px;
+
+    transition: 0.3s;
+}
+
+
+.nav-links a:hover {
+    color: #0d6efd;
+
+    background: #f0f5ff;
+}
+
+
+/* Header */
+
+header {
+    background: #0d6efd;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 35px 20px;
+}
+
+
+header h1 {
+    font-size: 32px;
+
+    margin-bottom: 10px;
+}
+
+
+header p {
+    font-size: 16px;
+}
+
+
+/* Main */
+
+main {
+    width: 90%;
+
+    max-width: 1100px;
+
+    margin: 30px auto;
+}
+
+
+/* Dashboard */
+
+.dashboard {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 15px;
+
+    margin-bottom: 30px;
+}
+
+
+.dashboard-card {
+    background: white;
+
+    padding: 22px;
+
+    border-radius: 12px;
+
+    text-align: center;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+
+.dashboard-card h3 {
+    font-size: 15px;
+
+    margin-bottom: 12px;
+
+    color: #555;
+}
+
+
+.dashboard-card p {
+    font-size: 30px;
+
+    font-weight: bold;
+
+    color: #0d6efd;
+}
+
+
+/* Forms */
+
+.appointment-form {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+    margin-bottom: 30px;
+}
+
+
+.appointment-form h2 {
+    color: #0d6efd;
+
+    margin-bottom: 20px;
+}
+
+
+form {
+    display: grid;
+
+    gap: 15px;
+}
+
+
+input,
+select {
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+
+    outline: none;
+
+    background: white;
+}
+
+
+input:focus,
+select:focus {
+    border-color: #0d6efd;
+
+    box-shadow: 0 0 5px rgba(13, 110, 253, 0.25);
+}
+
+
+/* Buttons */
+
+button {
+    padding: 12px 16px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #0d6efd;
+
+    color: white;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+button:hover {
+    background: #0b5ed7;
+}
+
+
+/* Appointments and Patients Tables */
+
+.appointments-list {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+
+.appointments-list h2 {
+    color: #0d6efd;
+
+    margin-bottom: 20px;
+}
+
+
+.search-box {
+    margin-bottom: 20px;
+}
+
+
+.table-container {
+    overflow-x: auto;
+}
+
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+}
+
+
+th,
+td {
+    padding: 12px;
+
+    border-bottom: 1px solid #ddd;
+
+    text-align: left;
+}
+
+
+th {
+    background: #f4f7fb;
+
+    color: #333;
+}
+
+
+/* Status */
+
+.status {
+    display: inline-block;
+
+    padding: 6px 10px;
+
+    border-radius: 20px;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+
+.status-scheduled {
+    background: #fff3cd;
+
+    color: #856404;
+}
+
+
+.status-completed {
+    background: #d1e7dd;
+
+    color: #0f5132;
+}
+
+
+.status-cancelled {
+    background: #f8d7da;
+
+    color: #842029;
+}
+
+
+/* Edit and Delete */
+
+.edit-btn {
+    background: #198754;
+
+    padding: 7px 10px;
+
+    margin-right: 5px;
+}
+
+
+.edit-btn:hover {
+    background: #157347;
+}
+
+
+.delete-btn {
+    background: #dc3545;
+
+    padding: 7px 10px;
+}
+
+
+.delete-btn:hover {
+    background: #bb2d3b;
+}
+
+
+/* Messages */
+
+.message-box {
+    display: none;
+
+    padding: 12px;
+
+    margin-bottom: 20px;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+}
+
+
+.message-success {
+    display: block;
+
+    background: #d1e7dd;
+
+    color: #0f5132;
+
+    border: 1px solid #badbcc;
+}
+
+
+/* Patient Lookup */
+
+.patient-lookup {
+    display: grid;
+
+    grid-template-columns: 1fr auto;
+
+    gap: 10px;
+}
+
+
+.patient-lookup button {
+    white-space: nowrap;
+
+    padding: 12px 18px;
+}
+
+
+#selectedPatientName {
+    background: #f8f9fa;
+
+    color: #555;
+}
+
+
+/* Empty Table */
+
+.empty-message {
+    text-align: center;
+
+    color: #777;
+
+    padding: 25px;
+}
+
+
+/* Logout */
+
+.logout-container {
+    display: flex;
+
+    justify-content: center;
+
+    margin: 50px 0 30px;
+}
+
+
+.logout-btn {
+    width: 220px;
+
+    padding: 14px;
+
+    background: #dc3545;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+.logout-btn:hover {
+    background: #bb2d3b;
+}
+
+
+/* Footer */
+
+footer {
+    text-align: center;
+
+    padding: 20px;
+
+    background: white;
+
+    border-top: 1px solid #ddd;
+
+    color: #666;
+}
+
+
+/* Login Page */
+
+.login-page {
+    background: #f4f7fb;
+}
+
+
+.login-container {
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 20px;
+}
+
+
+.login-card {
+    width: 100%;
+
+    max-width: 420px;
+
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 16px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.10);
+
+    text-align: center;
+}
+
+
+.login-card h1 {
+    color: #0d6efd;
+
+    margin-bottom: 10px;
+}
+
+
+.login-card p {
+    color: #666;
+
+    margin-bottom: 25px;
+}
+
+
+.login-card form {
+    display: grid;
+
+    gap: 15px;
+}
+
+
+.login-message {
+    margin-top: 15px;
+
+    color: #dc3545;
+
+    font-weight: bold;
+}
+
+
+/* Responsive */
+
+@media (max-width: 800px) {
+
+    .dashboard {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    .navbar {
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+
+    .nav-links {
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    header h1 {
+        font-size: 24px;
+    }
+
+
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+
+
+    .patient-lookup {
+        grid-template-columns: 1fr;
+    }
+
+
+    .patient-lookup button {
+        width: 100%;
+    }
+}
+
+
+.chart-section {
+    margin-top: 30px;
+}
+
+.chart-container {
+    position: relative;
+    width: 100%;
+    max-width: 850px;
+    height: 380px;
+    margin: 20px auto 0;
+}

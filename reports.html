@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SonoCare - Reports</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+
+        <div class="logo">
+            SonoCare
+        </div>
+
+        <div class="nav-links">
+            <a href="index.html">Dashboard</a>
+            <a href="patients.html">Patients</a>
+            <a href="appointments.html">Appointments</a>
+            <a href="reports.html">Reports</a>
+        </div>
+
+    </nav>
+
+
+    <!-- Header -->
+    <header>
+        <h1>Reports</h1>
+        <p>View appointment statistics and examination activity.</p>
+    </header>
+
+
+    <main>
+
+        <!-- Statistics -->
+        <section class="dashboard">
+
+            <div class="dashboard-card">
+                <h3>Total Appointments</h3>
+                <p id="reportTotal">0</p>
+            </div>
+
+            <div class="dashboard-card">
+                <h3>Scheduled</h3>
+                <p id="reportScheduled">0</p>
+            </div>
+
+            <div class="dashboard-card">
+                <h3>Completed</h3>
+                <p id="reportCompleted">0</p>
+            </div>
+
+            <div class="dashboard-card">
+                <h3>Cancelled</h3>
+                <p id="reportCancelled">0</p>
+            </div>
+
+        </section>
+
+
+        <!-- Examination Summary -->
+        <section class="appointments-list">
+
+            <h2>Examinations Summary</h2>
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Examination</th>
+                            <th>Total Appointments</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="examReportBody">
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- Chart -->
+        <section class="appointments-list chart-section">
+
+            <h2>Appointments Chart</h2>
+
+            <div class="chart-container">
+                <canvas id="appointmentsChart"></canvas>
+            </div>
+
+        </section>
+
+
+        <!-- PDF Button -->
+        <div class="report-actions">
+
+            <button id="downloadPdf">
+                Download PDF Report
+            </button>
+
+        </div>
+
+    </main>
+
+
+    <!-- Logout -->
+    <div class="logout-container">
+
+        <button id="logoutBtn" class="logout-btn">
+            Logout
+        </button>
+
+    </div>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 SonoCare</p>
+    </footer>
+
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- jsPDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <!-- Authentication -->
+    <script src="auth.js"></script>
+
+    <!-- Reports -->
+    <script src="reports.js"></script>
+
+</body>
+
+</html>
